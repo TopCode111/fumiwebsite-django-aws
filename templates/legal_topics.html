@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block page_title %}親族・家庭内トラブル｜千葉県佐倉市で弁護士に相談{% endblock %}
+
+{% block extra_css %}{% endblock %}
+
+
+{% block content %}
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <h2>業務内容</h2>
+                <p>ちょっとしたお悩みでもかまいません。
+                    まずはお気軽にお問い合わせください。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="service-section section-padding">
+    <div class="content-area clearfix">
+        <div class="left-col">
+            <div class="inner-content">
+                <blockquote>ご相談者様のお話をゆっくりとうかがい、お悩み一つ一つにじっくりと向き合っていきたい、そんな想いから地元千葉にて当事務所を開設いたしました。</blockquote>
+
+                <h4>礒野史大</h4>
+                <span>弁護士</span>
+            </div>
+        </div>
+        <div class="right-col">
+            <div class="section-title-s2">
+                <div class="icon">
+                    <i class="fi flaticon-balance"></i>
+                </div>
+                <span>業務内容</span>
+                <h2></h2>
+                <p>所有資格：夫婦カウンセラー</p>
+            </div>
+            <div class="service-grids clearfix">
+                <div class="grid">
+                    <i class="fi flaticon-parents"></i>
+                    <h3><a href="{% url 'website:domestic_law' %}">ご家庭のお悩み</a></h3>
+                    <p>離婚、慰謝料、婚姻費用、財産分与、親権、養育費、面会交流など
+                    </p>
+                </div>
+                <div class="grid">
+                    <i class="fi flaticon-wounded"></i>
+                    <h3><a href="{% url 'website:family_law' %}">ご家族のお悩み</a></h3>
+                    <p>相続、遺言書、遺産分割、相続放棄、遺留分、成年後見など</p>
+                </div>
+                <div class="grid">
+                    <i class="fi flaticon-thief"></i>
+                    <h3><a href="{% url 'website:money_law' %}">お金のお悩み</a></h3>
+                    <p>金銭の貸し借り、債務整理、交通事故など</p>
+                </div>
+                <div class="grid">
+                    <i class="fi flaticon-mortarboard"></i>
+                    <h3><a href="{% url 'website:work_law' %}">お仕事のお悩み</a></h3>
+                    <p>未払賃金、解雇、退職金、ハラスメントなど</p>
+                </div>
+                <div class="grid">
+                    <i class="fi flaticon-architecture-and-city"></i>
+                    <h3><a href="{% url 'website:dailylife_law' %}">日常生活のお悩み</a></h3>
+                    <p>不動産、学校、インターネット、刑事など
+                    </p>
+                </div>
+                <div class="grid">
+                    <i class="fi flaticon-save-money"></i>
+                    <h3><a href="{% url 'contact_form:contact' %}">その他</a></h3>
+                    <p>まずはご相談ください。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% block extra_js %}{% endblock %}
+{% endblock %}

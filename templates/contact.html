@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block page_title %}親族・家庭内トラブル｜千葉県佐倉市で弁護士に相談{% endblock %}
+
+
+{% block content %}
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <h2>お問い合わせ</h2>
+                <p>佐倉市や佐倉市周辺のご地域（千葉市、四街道市、八千代市、印西市、白井市、成田市、印旛郡、富里市、八街市など）はもちろん、<br>それ以外のご地域にも対応しておりますのでご安心ください。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br /><br /><br />
+{% if name %}
+<center>
+    <h2> {{ name }}さん、お問い合わせいただきありがとうございます。</h2>
+    <p>お返事をさせていただくまで、今しばらくお待ちください。</p>
+</center>
+<br /><br /><br />
+{% else %}
+
+
+<section class="contact-section-s3 contact-pg-section">
+    <div class="content-area clearfix">
+        <div class="contact-info-col">
+            <div class="contact-info">
+                <ul>
+                    <li>
+                        <i class="fi flaticon-home-3"></i>
+                        <h4>住所</h4>
+                        <p>〒２８５―０８６３<br>　千葉県佐倉市臼井３２―３<br>　※臼井郵便局の隣にございます。</p><br><br>
+                        <p> 電車でお越しの方<br>. . .最寄り駅　京成臼井駅　北口徒歩５分<br>
+                            お車でお越しの方<br>. . .当事務所前に駐車スペースがございます</p>
+                    </li>
+                    <li>
+                        <i class="fi flaticon-email"></i>
+                        <h4>メールアドレス</h4>
+                        <p>isono@isono-law.com</p>
+                    </li>
+                    <li>
+                        <i class="fi flaticon-support"></i>
+                        <h4>電話</h4>
+                        <p><a href="tel:043-312-1644">043-312-1644</a></p>
+                    </li>
+                    <li>
+                        <i class="fi flaticon-clock"></i>
+                        <h4>営業時間</h4>
+                        <p>平日９時３０分～１８時<br>※営業時間内にご都合がつかない方は、お問い合わせの際に、お気軽にご相談ください。</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="contact-form-col">
+            <div class="section-title-s2">
+                <div class="icon">
+                    <i class="fi flaticon-balance"></i>
+                </div>
+                <span>コンタクト</span>
+                <h2>お問い合わせフォーム</h2>
+                <p>ご相談をご希望の方は、以下のお問い合わせフォームにて、お気軽にお問い合わせください。</p>
+            </div>
+
+            <div class="contact-form">
+                <form action="{% url 'contact_form:contact' %}" method="post" class="contact-validation-active"
+                    id="contact-form-main">{% csrf_token%}
+                    <div>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="お名前*">
+                    </div>
+                    <div>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="メールアドレス*">
+                    </div>
+                    <div>
+                        <input type="text" class="form-control" name="phone" id="phone" placeholder="お電話番号*">
+                    </div>
+                    <div>
+                        <select name="subject" class="form-control">
+                            <option disabled="disabled" selected>お問い合わせ内容</option>
+                            <option>ご家庭のお悩み</option>
+                            <option>ご家族のお悩み</option>
+                            <option>お金のお悩み</option>
+                            <option>お仕事のお悩み</option>
+                            <option>日常生活のお悩み</option>
+                        </select>
+                    </div>
+                    <div class="fullwidth">
+                        <textarea class="form-control" name="note" id="note" placeholder="詳細をお書きください"></textarea>
+                    </div>
+                    <div class="submit-area">
+                        <button type="submit" class="theme-btn">お問い合わせ</button>
+                        <div id="loader">
+                            <i class="ti-reload"></i>
+                        </div>
+                    </div>
+                    <div class="clearfix error-handling-messages">
+                        <div id="success">お問い合わせいただき、ありがとうございます。</div>
+                        <div id="error"> 申し訳ございません、エラーが発生しました。再度お問い合わせください。</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endif %}
+
+
+<section class="contact-map-section">
+    <h2 class="hidden">地図</h2>
+    <div class="contact-map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.669327673946!2d140.18140471561298!3d35.73435013466358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x602288829ce77543%3A0xcce12db3ecc3847c!2z44CSMjg1LTA4NjMg5Y2D6JGJ55yM5L2Q5YCJ5biC6Ie85LqV77yT77yS!5e0!3m2!1sja!2sjp!4v1621854533110!5m2!1sja!2sjp"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+
+{% block extra_js %}{% endblock %}
+{% endblock %}

@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block page_title %}親族・家庭内トラブル｜千葉県佐倉市で弁護士に相談{% endblock %}
+
+{% block extra_css %}{% endblock %}
+
+
+{% block content %}
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <h2>事務所概要</h2>
+                <p></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="team-sigle-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="center">
+                <div class="attorney-single-content">
+                    <div class="attorney">
+                        <div class="img-holder">
+                            <img src="assets/images/about/img-1.jpg" alt=>
+                        </div>
+                        <div class="attorney-single-info">
+                            <div class="info">
+                                <h3>礒野史大</h3>
+                                <span>弁護士</span>
+                                <ul>
+                                    <li><span>電話：</span><a href="tel:043-312-1644">043-312-1644</a></li>
+                                    <li><i class="ti-email"></i><span>メールアドレス: </span>isono@isono-law.com</li>
+                                    <li><i class="ti-timer"></i><span>経験: </span>５年</li>
+                                    <li><i class="ti-location-pin"></i><span>住所:
+                                        </span>〒２８５―０８６３<br>　 千葉県佐倉市臼井３２―３<br>　 ※臼井郵便局の隣にございます。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="attorney-details">
+                        <h2>事務所概要</h2>
+                        <p>「ここ数日、ある悩みがずっと頭の中にあって…」<br>
+                            お悩みをお一人で抱え込まれると、心と体が疲れきってしまいますよね。<br><br>
+                            ご相談者様のお話をゆっくりとうかがい、お悩み一つ一つにじっくりと向き合っていきたい、そんな想いから地元千葉にて当事務所を開設いたしました。<br><br>
+                            当事務所では、木材や緑を取り入れるなど、ご相談者様がリラックスしてお話できる、そんな環境づくりの工夫もしております。<br><br>
+                            ちょっとしたお悩みでもかまいません。
+                            まずはお気軽にお問い合わせください。<br><br>
+                        <div data-swiper-parallax="500" class="slide-btns">
+                            <a href="{% url 'contact_form:contact' %}" class="theme-btn">お問い合わせはこちら</a></div>
+                        </p>
+                        <br>
+                        <h2>弁護士紹介</h2>
+                        <p>２０１５年　専修大学法科大学院修了<br>２０２１年　礒野史大法律事務所開設<br><br>資格　夫婦カウンセラー</p>
+                        <br>
+                        <h2>著書</h2>
+                        <p>近日出版</p>
+                        <br>
+                        <h2>業務分野一覧</h2>
+                        <ul>
+                            <li>- ご家庭のお悩み</li>
+                            <li>- ご家族のお悩み</li>
+                            <li>- お金のお悩み</li>
+                            <li>- お仕事のお悩み</li>
+                            <li>- 日常生活のお悩み</li>
+                        </ul>
+                        <br>
+                        <h2>得意技能</h2>
+                        <div class="skills">
+                            <div class="skill">
+                                <h6>ご家庭関係</h6>
+                                <div class="progress">
+                                    <div class="progress-bar" data-percent="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <h6>ご家族関係</h6>
+                                <div class="progress">
+                                    <div class="progress-bar" data-percent="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <h6>お金関係</h6>
+                                <div class="progress">
+                                    <div class="progress-bar" data-percent="92"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <h6>お仕事関係</h6>
+                                <div class="progress">
+                                    <div class="progress-bar" data-percent="95"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2>お問い合わせ</h2>
+                        <div class="contact-form">
+                            <form method="post">
+                                <div>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="お名前*">
+                                </div>
+                                <div>
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="メールアドレス*">
+                                </div>
+                                <div class="fullwidth">
+                                    <textarea class="form-control" name="note" id="note"
+                                        placeholder="詳細をお書きください"></textarea>
+                                </div>
+                                <div class="submit-area">
+                                    <button type="submit" class="theme-btn">お問い合わせ</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% block extra_js %}{% endblock %}
+{% endblock %}

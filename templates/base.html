@@ -1,0 +1,235 @@
+<!doctype html>
+{% load static %}
+<html lang="ja">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="irstheme">
+    <title>{% block page_title %}{% endblock %}</title>
+
+    {# ------------- css ------------- #}
+    <link href="{% static 'assets/css/themify-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/flaticon.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/owl.theme.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/slick.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/slick-theme.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/swiper.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/owl.transitions.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/jquery.fancybox.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+    {% block extra_css %}{% endblock %}
+
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        {# ------------- preloader ------------- #}
+
+        <div class="preloader">
+            <div class="sk-chase">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+            </div>
+        </div>
+
+
+        {# ------------- header ------------- #}
+
+        <header id="header" class="site-header header-style-1">
+            <div class="topbar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-md-10">
+                            <div class="contact-info">
+                                <ul class="clearfix">
+                                    <li><span>電話：</span><a href="tel:043-312-1644">043-312-1644</a></li>
+                                    <li><span>メール：</span>isono@isono-law.com</li>
+                                    <li><span>住所：</span>〒285-0863 千葉県佐倉市臼井３２―３</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-md-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navigation navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="open-btn">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="{% url 'website:index' %}"><img
+                                src="{% static 'assets/images/logo/logo_header.png' %}"></a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse navbar-right navigation-holder">
+                        <button class="close-navbar"><i class="ti-close"></i></button>
+                        <ul class="nav navbar-nav">
+                            <li><a href="{% url 'website:index' %}">ホーム</a></li>
+                            <li><a href="{% url 'website:about' %}">事務所概要</a></li>
+                            <li class="menu-item-has-children">
+                                <a href="{% url 'website:legal_topics' %}">業務内容</a>
+                                <ul class="sub-menu">
+                                    <li><a href="{% url 'website:legal_topics' %}">一覧表示</a></li>
+                                    <li><a href="{% url 'website:domestic_law' %}">ご家庭のお悩み</a></li>
+                                    <li><a href="{% url 'website:family_law' %}">ご家族のお悩み</a></li>
+                                    <li><a href="{% url 'website:money_law' %}">お金のお悩み</a></li>
+                                    <li><a href="{% url 'website:work_law' %}">お仕事のお悩み</a></li>
+                                    <li><a href="{% url 'website:dailylife_law' %}">日常生活のお悩み</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'website:price' %}">費用</a></li>
+                            <li><a href="{% url 'contact_form:contact' %}">お問い合わせ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="cart-search-contact">
+                        <div class="header-search-form-wrapper">
+                            <button class="search-toggle-btn"><i class="fi flaticon-magnifying-glass"></i></button>
+                            <div class="header-search-form">
+                                <form method="get" action="http://www.google.co.jp/search" target="_blank">
+                                    <input type="text" class="form-control" maxlength="255" value="" placeholder="検索">
+                                    <button type="submit"><i class="ti-search"></i></button>
+                                    <input type="hidden" name="hl" value="ja">
+                                    <input type="hidden" name="sitesearch" value="https://www.isono-law.com">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        {% block content %}{% endblock %}
+
+
+        {# ------------- footer ------------- #}
+        <footer class=" site-footer">
+            <div class="social-newsletter-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-xs-12">
+                            <div class="social-newsletter-content clearfix">
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="upper-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-3 col-md-3 col-sm-6">
+                            <div class="widget about-widget">
+                                <div class="widget-title">
+                                    <h3>事務所概要</h3>
+                                </div>
+                                <p>　ご相談者様のお話をゆっくりとうかがい、お悩み一つ一つにじっくりと向き合っていきたい。<br>　そんな温かさと安心感を同時に与えられるような居場所をつくりたいという想いから、
+                                    地元千葉にて当事務所を開設いたしました。<br>　当事務所では、木材や緑を取り入れるなど、ご相談者様がリラックスしてお話できる、そんな環境づくりへの工夫もしております。<br>　ちょっとしたお悩みでもかまいません。<br>まずはお気軽にお問い合わせください。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-3 col-sm-6">
+                            <div class="widget contact-widget service-link-widget">
+                                <div class="widget-title">
+                                    <h3>住所</h3>
+                                </div>
+                                <ul>
+                                    <li>〒２８５―０８６３<br>　千葉県佐倉市臼井３２―３<br>　※臼井郵便局の隣にございます。
+                                    </li>
+                                    <br>
+                                    <li><span>電話：</span><a href="tel:043-312-1644">043-312-1644</a></li>
+                                    <li><span>メール：</span>isono@isono-law.com</li>
+                                    <li><span>営業時間：</span>平日9時30分～18時<br>　※営業時間内にご都合がつかない方は、お問い合わせの際に、お気軽にご相談ください。
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-3 col-sm-6">
+                            <div class="widget link-widget">
+                                <div class="widget-title">
+                                    <h3>リンク</h3>
+                                </div>
+                                <ul>
+                                    <li><a href="{% url 'website:about' %}">事務所概要</a></li>
+                                    <li><a href="{% url 'website:about' %}">弁護士紹介</a></li>
+                                    <li><a href="{% url 'website:legal_topics' %}">業務内容</a></li>
+                                    <li><a href="{% url 'website:price' %}">費用</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="{% url 'contact_form:contact' %}">お問い合わせ</a></li>
+                                    <li><a href="{% url 'contact_form:contact' %}">地図</a></li>
+                                    <li><a href="{% url 'website:faq' %}">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-3 col-sm-6">
+                            <div class="widget link-widget line-widget-2">
+                                <div class="widget-title">
+                                    <h3>業務内容</h3>
+                                </div>
+                                <ul>
+                                    <li><a href="{% url 'website:domestic_law' %}">ご家庭のお悩み</a></li>
+                                    <li><a href="{% url 'website:family_law' %}">ご家族のお悩み</a></li>
+                                    <li><a href="{% url 'website:money_law' %}">お金のお悩み</a></li>
+                                    <li><a href="{% url 'website:work_law' %}">お仕事のお悩み</a></li>
+                                    <li><a href="{% url 'website:dailylife_law' %}">日常生活のお悩み</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lower-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="separator"></div>
+                        <div class="col col-xs-12">
+                            <p class="copyright">Copyright &copy; 2021 Isono-law. All
+                                rights
+                                reserved.</p>
+                            <div class="extra-link">
+                                <ul>
+                                    <li><a href="{% static 'assets/images/privacy.docx' %}">プライバシーポリシー</a></li>
+                                    <li><a href="{% url 'website:about' %}">事務所概要</a></li>
+                                    <li><a href="{% url 'website:faq' %}">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    {# --- js --- #}
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+    <script src="{% static 'assets/js/jquery-plugin-collection.js' %}"></script>
+
+
+    <script src="{% static 'assets/js/script.js' %}"></script>
+
+    {% block extra_js %}{% endblock %}
+</body>
+
+</html>

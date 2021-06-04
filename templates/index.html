@@ -1,0 +1,399 @@
+{% extends 'base.html' %}"
+{% load static %}
+{% block extra_css %}{% endblock %}
+
+
+{% block page_title %}親族・家庭内トラブル｜千葉県佐倉市で弁護士に相談{% endblock %}
+
+{% block content %}
+<section class=" hero-slider hero-style-1">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="slide-inner slide-bg-image" data-background="{% static 'assets/images/deco/desk.jpg' %}"
+                    data-text="<i class='fi flaticon-dog'></i>ご家庭のお悩み<h4>離婚、財産分与、親権、面会交流など</h4>">
+                    <div class="container">
+                        <div data-swiper-parallax="300" class="slide-title">
+                            <h2>「ここ数日、<br>ある悩みがずっと<br>頭の中にあって…」</h2>
+                        </div>
+                        <div data-swiper-parallax="400" class="slide-text">
+                            <p>お悩みをお一人で抱え込まれると、<br>心と体が疲れきってしまいますよね。<br>ちょっとしたお悩みでもかまいません。<br>まずはお気軽にお問い合わせください。
+                            </p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div data-swiper-parallax="500" class="slide-btns">
+                            <a href="contact.html" class="theme-btn">お問い合わせはこちら</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="slide-inner slide-bg-image"
+                    data-background="{% static 'assets/images/kids_space/kids_space.jpg' %}"
+                    data-text="<i class='fi flaticon-wounded'></i>ご家族のお悩み<h4>相続、遺産分割、成年後見など</h4>">
+                    <div class="container">
+                        <div data-swiper-parallax="300" class="slide-title">
+                            <h2>「ここ数日、<br>ある悩みがずっと<br>頭の中にあって…」</h2>
+                        </div>
+                        <div data-swiper-parallax="400" class="slide-text">
+                            <p>お悩みをお一人で抱え込まれると、<br>心と体が疲れきってしまいますよね。<br>ちょっとしたお悩みでもかまいません。<br>まずはお気軽にお問い合わせください。
+                            </p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div data-swiper-parallax="500" class="slide-btns">
+                            <a href="contact.html" class="theme-btn">お問い合わせはこちら</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="slide-inner slide-bg-image" data-background="{% static 'assets/images/deco/wall.jpg' %}"
+                    data-text="<i class='fi flaticon-thief'></i>お金のお悩み<h4>金銭の貸し借り、<br>債務整理、交通事故など</h4>">
+                    <div class="container">
+                        <div data-swiper-parallax="300" class="slide-title">
+                            <h2>「ここ数日、<br>ある悩みがずっと<br>頭の中にあって…」</h2>
+                        </div>
+                        <div data-swiper-parallax="400" class="slide-text">
+                            <p>お悩みをお一人で抱え込まれると、<br>心と体が疲れきってしまいますよね。<br>ちょっとしたお悩みでもかまいません。<br>まずはお気軽にお問い合わせください。
+                            </p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div data-swiper-parallax="500" class="slide-btns">
+                            <a href="contact.html" class="theme-btn">お問い合わせはこちら</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class=" swiper-slide">
+                <a href="{% url 'website:work_law' %}"></a>
+                <div class="slide-inner slide-bg-image"
+                    data-background="{% static 'assets/images/deco/pen_paper.jpg' %}"
+                    data-text="<i class='fi flaticon-thief'></i>お仕事のお悩み<h4>未払賃金、解雇、退職金、ハラスメントなど</h4>">
+                    <div class="container">
+                        <div data-swiper-parallax="300" class="slide-title">
+                            <h2>「ここ数日、<br>ある悩みがずっと<br>頭の中にあって…」</h2>
+                        </div>
+                        <div data-swiper-parallax="400" class="slide-text">
+                            <p>お悩みをお一人で抱え込まれると、<br>心と体が疲れきってしまいますよね。<br>ちょっとしたお悩みでもかまいません。<br>まずはお気軽にお問い合わせください。
+                            </p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div data-swiper-parallax="500" class="slide-btns">
+                            <a href="contact.html" class="theme-btn">お問い合わせはこちら</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {# ------------- swipper controls ------------- #}
+        <div class="swiper-cust-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+
+{# ------------- about ------------- #}
+<section class="about-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-4 col-sm-offset-1">
+                <div class="right-col">
+                    <p>「ここ数日、<br>ある悩みがずっと頭の中にあって…」<br><br>お悩みをお一人で抱え込まれると、心と体が疲れきってしまいますよね。<br><br>ご相談者様のお話をゆっくりとうかがい、お悩み一つ一つにじっくりと向き合っていきたい、そんな想いから地元千葉にて当事務所を開設いたしました。
+                    </p><br>
+                    <a href="{% url 'website:about' %}" class="more-about">事務所概要<i class="fi flaticon-next-1"></i></a>
+                </div>
+            </div>
+            <div class="col col-md-4 col-sm-offset-1">
+                <div class="right-col">
+                    <p>ご相談者様のお話をゆっくりとうかがい、<strong class="mark">お悩み一つ一つにじっくりと向き合っていきたい。</strong><br><br>そんな温かさと安心感を同時に与えられるような居場所をつくりたいという想いから、
+                        地元千葉にて当事務所を開設いたしました。<br><br>ちょっとしたお悩みでもかまいません。
+                        まずはお気軽にお問い合わせください。
+                    </p>
+                    <div class="quoter">
+                        <h4>礒野史大</h4>
+                        <span>- 弁護士</span>
+                    </div>
+                    <a href="{% url 'website:about' %}" class="more-about">弁護士紹介<i class="fi flaticon-next-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{# ------------- legal_topics ------------- #}
+
+<section class="service-section">
+    <div class="content-area clearfix">
+        <div class="left-col">
+            <div class="inner-content">
+                <blockquote>
+                    ご相談者様のお話をゆっくりとうかがい、<strong class="mark">お悩み一つ一つにじっくりと向き合っていきたい。</strong><br><br>そんな温かさと安心感を同時に与えられるような居場所をつくりたいという想いから、地元千葉にて当事務所を開設いたしました。
+                </blockquote>
+
+                <h4>礒野史大</h4>
+                <span>弁護士</span>
+            </div>
+        </div>
+        <div class="right-col">
+            <div class="section-title-s2">
+                <div class="icon">
+                    <i class="fi flaticon-balance"></i>
+                </div>
+                <span>業務内容</span>
+                <h2></h2>
+                <p>所有資格：夫婦カウンセラー</p>
+            </div>
+            <div class="service-grids clearfix">
+                <div class="grid">
+                    <i class="fi flaticon-parents"></i>
+                    <h3><a href="{% url 'website:domestic_law' %}">ご家庭のお悩み</a></h3>
+                    <p>離婚、慰謝料、婚姻費用、財産分与、親権、養育費、面会交流など
+                    </p>
+                </div>
+                <div class="grid">
+                    <i class="fi flaticon-wounded"></i>
+                    <h3><a href="{% url 'website:family_law' %}">ご家族のお悩み</a></h3>
+                    <p>相続、遺言書、遺産分割、相続放棄、遺留分、成年後見など</p>
+                </div>
+                <div class="grid">
+                    <i class="fi flaticon-thief"></i>
+                    <h3><a href="{% url 'website:money_law' %}">お金のお悩み</a></h3>
+                    <p>金銭の貸し借り、債務整理、交通事故など</p>
+                </div>
+                <div class="grid">
+                    <i class="fi flaticon-mortarboard"></i>
+                    <h3><a href="{% url 'website:work_law' %}">お仕事のお悩み</a></h3>
+                    <p>未払賃金、解雇、退職金、ハラスメントなど</p>
+                </div>
+                <div class="grid">
+                    <i class="fi flaticon-architecture-and-city"></i>
+                    <h3><a href="{% url 'website:dailylife_law' %}">日常生活のお悩み</a></h3>
+                    <p>不動産、学校、インターネット、刑事など
+                    </p>
+                </div>
+                <div class="grid">
+                    <i class="fi flaticon-save-money"></i>
+                    <h3><a href="{% url 'contact_form:contact' %}">その他</a></h3>
+                    <p>まずはご相談ください。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{# ------------- kids_space ------------- #}
+
+<section class="case-studies-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <div class="section-title-s3">
+                    <div class="icon">
+                        <i class="fi flaticon-suitcase"></i>
+                    </div>
+                    <span>キッズスペース</span>
+                    <h2>キッズスペースのご案内</h2>
+                    <p>当事務所には、お子様をお連れのご相談者様のために、<br>キッズスペースを設けております。<br><br>キッズスペースには、絵本やおもちゃのご用意もしております。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="kids_picture">
+      <img src="../static/assets/images/kids_space/kid.jpg" alt="#">
+    </div>
+</section>
+
+
+
+        {# ------------- review ------------- #}
+
+        <section class="testimonials-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-5">
+                        <div class="section-title-s4">
+                            <div class="icon">
+                                <i class="fi flaticon-blocks-with-angled-cuts"></i>
+                            </div>
+                            <span>レビュー</span>
+                            <h2>お客様の声</h2>
+                            <p>ご相談者様のお話をゆっくりとうかがい、お悩み一つ一つにじっくりと向き合っています。<br>また、当事務所では、木材や緑を取り入れるなど、ご相談者様がリラックスしてお話できる、そんな環境づくりへの工夫もしております。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col col-lg-7">
+                        <div class="testimonials-grids testimonials-slider">
+                            <div class="grid">
+                                <i class="fi flaticon-left-quote"></i>
+                                <p>勇気を出して相談してよかったです。弁護士さんがとても優しく安心しました。</p>
+                                <div class="client-info">
+                                    <div class="img-holder">
+                                        <img src="{% static 'assets/images/icon/lady1.png' %}" alt>
+                                </div>
+                                <h3>レビュー１</h3>
+                                <span>主婦</span>
+                            </div>
+                        </div>
+                        <div class="grid">
+                            <i class="fi flaticon-left-quote"></i>
+                            <p>とても助けられました。相談するかずっと迷っていましたが、相談して正解でした。</p>
+                            <div class="client-info">
+                                <div class="img-holder">
+                                    <img src="{% static 'assets/images/icon/man1.png' %}" alt>
+                                </div>
+                                <h3>レビュー２</h3>
+                                <span>会社員</span>
+                            </div>
+                        </div>
+                        <div class="grid">
+                            <i class="fi flaticon-left-quote"></i>
+                            <p>事務所の雰囲気がとても温かく、また足を運びたくなるような雰囲気で素敵でした。</p>
+                            <div class="client-info">
+                                <div class="img-holder">
+                                    <img src="{% static 'assets/images/icon/lady2.png' %}" alt>
+                                </div>
+                                <h3>レビュー３</h3>
+                                <span>教師</span>
+                            </div>
+                        </div>
+                        <div class="grid">
+                            <i class="fi flaticon-left-quote"></i>
+                            <p>キッズスペースが用意されていることに感激しました。子供を連れて気軽に相談に行けるのは本当に助かります。</p>
+                            <div class="client-info">
+                                <div class="img-holder">
+                                    <img src="{% static 'assets/images/icon/man2.png' %}" alt>
+                                </div>
+                                <h3>レビュー３</h3>
+                                <span>教師</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+{# ------------- COVID 注意 ------------- #}
+<section class="case-studies-section section-padding">
+    <div class="section-title-s3">
+        <div class="icon">§§
+            <i class="fi flaticon-suitcase"></i>
+        </div>
+        <span>新型コロナウイルスへの対策について</span>
+        <h2>新型コロナウイルスへの対策について</h2>
+        <p>当事務所では、ご相談者様に安心してお越しいただくために、新型コロナウイルスへの対策を徹底しております。<br>当事務所の玄関には手指消毒用のアルコールを、ご相談室には飛沫防止用のパーテーションをご用意しております。<br>また、ご相談者様には、マスクの着用をお願いしておりますので、ご協力のほどよろしくお願いいたします。
+        </p>
+    </div>
+</section>
+
+{# ------------- contact me anytime ------------- #}
+
+<section class="cta-section">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="cta-conetnt">
+                    <div class="cta-logo">
+                        <img src="{% static 'assets/images/ISONOlogowhite.png' %}" alt>
+                    </div>
+                    <h5>いつでもお電話ください。</h5>
+                    <h2><a href="tel:043-312-1644"><span>043-312-1644</span></a></h2>
+                    <a href="{% url 'contact_form:contact' %}" class="theme-btn-s3">お問い合わせ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="content-area clearfix">
+        <div class="contact-info-col">
+            <div class="contact-info">
+                <ul>
+                    <li>
+                        <i class="fi flaticon-home-3"></i>
+                        <h4>住所</h4>
+                        <p>〒２８５―０８６３<br>千葉県佐倉市臼井３２―３<br>※臼井郵便局の隣にございます。</p>
+                    </li>
+                    <li>
+                        <i class="fi flaticon-email"></i>
+                        <h4>メール</h4>
+                        <p>isono@isono-law.com</p>
+                    </li>
+                    <li>
+                        <i class="fi flaticon-support"></i>
+                        <h4>電話</h4>
+                        <p><a href="tel:043-312-1644">043-312-1644</a></p>
+                    </li>
+                    <li>
+                        <i class="fi flaticon-clock"></i>
+                        <h4>営業時間</h4>
+                        <p>平日：９時３０分～１８時</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="contact-form-col">
+            <div class="section-title-s2">
+                <div class="icon">
+                    <i class="fi flaticon-balance"></i>
+                </div>
+                <span>コンタクトフォーム</span>
+                <h2>ちょっとしたお悩みでもかまいません。<br>まずはお気軽にお問い合わせください。</h2>
+                <p>ご相談をご希望の方は、以下のお問い合わせフォームにて、お気軽にお問い合わせください。</p>
+            </div>
+
+            <div class="contact-form">
+
+                <form action="{% url 'contact_form:contact' %}" method="post" class="contact-validation-active"
+                    id="contact-form-main">{% csrf_token%}
+                    <div>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="名前*">
+                    </div>
+                    <div>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="メールアドレス*">
+                    </div>
+                    <div>
+                        <input type="text" class="form-control" name="phone" id="phone" placeholder="電話番号*">
+                    </div>
+                    <div>
+                        <select name="subject" class="form-control">
+                            <option disabled="disabled" selected>ご相談内容</option>
+                            <option>ご家庭のお悩み</option>
+                            <option>ご家族のお悩み</option>
+                            <option>お金のお悩み</option>
+                            <option>お仕事のお悩み</option>
+                            <option>日常生活のお悩み</option>
+                            <option>その他</option>
+                        </select>
+                    </div>
+                    <div class="fullwidth">
+                        <textarea class="form-control" name="note" id="note" placeholder="ご相談内容をお聞かせください。"></textarea>
+                    </div>
+                    <div class="submit-area">
+                        <button type="submit" class="theme-btn-s3">相談する</button>
+                        <div id="loader">
+                            <i class="ti-reload"></i>
+                        </div>
+                    </div>
+                    <div class="clearfix error-handling-messages">
+                        <div id="success">ありがとうございます。</div>
+                        <div id="error"> 申し訳ございません。エラーが発生いたしました。もう一度お試しください。
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% block extra_js %}{% endblock %}
+{% endblock %}

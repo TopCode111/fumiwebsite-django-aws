@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block page_title %}親族・家庭内トラブル｜千葉県佐倉市で弁護士に相談{% endblock %}
+
+{% block extra_css %}{% endblock %}
+
+
+{% block content %}
+<section class="page-title"></section>
+<div class="container">
+    <div class="row">
+        <div class="col col-xs-12">
+            <h2>404</h2>
+            <p>エラー</p>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+
+<section class="error-404-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="content clearfix">
+                    <div class="error">
+                        <h2>404</h2>
+                    </div>
+                    <div class="error-message">
+                        <h3>ページが見つかりません</h3>
+                        <p>お探しのページは移動または削除された可能性があります。</p>
+                        <a href="{% url 'website:index' %}" class="theme-btn">ホームに戻る</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% block extra_js %}{% endblock %}
+{% endblock %}

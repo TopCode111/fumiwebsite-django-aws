@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block page_title %}親族・家庭内トラブル｜千葉県佐倉市で弁護士に相談{% endblock %}
+
+{% block extra_css %}{% endblock %}
+
+
+{% block content %}
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <h2>費用</h2>
+                <p>お支払いの方法は、一括払いをお願いしておりますが、分割払いが可能な場合もございますので、ご遠慮なくご相談ください。
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="case-studies-section case-studies-pg-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <div class="section-title-s3">
+                    <div class="icon">
+                        <i class="fi flaticon-suitcase"></i>
+                    </div>
+                    <span>費用</span>
+                    <h2></h2>
+                    <p>着手金や報酬金は、事件の種類などによって異なりますので、詳しくはご相談にいらした際にお問い合わせください。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="content-area">
+        <div class="case-studies-grids case-studies-slider">
+            <div class="grid">
+                <div class="img-holder">
+                    <img src="{% static 'assets/images/deco/bear.jpg' %}" alt>
+                </div>
+                <div class="overlay">
+                    <div class="content">
+                        <p class="cat">法律相談料</p>
+                        <h3><a href="{% url 'contact_form:contact' %}">30分　5500円（税込み）</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class=" grid">
+                <div class="img-holder">
+                    <img src="{% static 'assets/images/deco/green.jpg' %}" alt>
+                </div>
+                <div class="overlay">
+                    <div class="content">
+                        <p class="cat">着手金</p>
+                        <h3><a href="{% url 'contact_form:contact' %}">事件をご依頼いただいた際にかかる費用になります。</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="img-holder">
+                    <img src="{% static 'assets/images/deco/bear.jpg' %}" alt>
+                </div>
+                <div class="overlay">
+                    <div class="content">
+                        <p class="cat">報酬金</p>
+                        <h3><a href="{% url 'contact_form:contact' %}">事件が解決した際にかかる費用になります</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="img-holder">
+                    <img src="{% static 'assets/images/deco/green.jpg' %}" alt>
+                </div>
+                <div class="overlay">
+                    <div class="content">
+                        <p class="cat">実費</p>
+                        <h3><a href="{% url 'contact_form:contact' %}">交通費や収入印紙代など、<br>事件を処理するためにかかる費用になります。</a></h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+</section>
+
+
+
+
+
+
+{% block extra_js %}{% endblock %}
+{% endblock %}

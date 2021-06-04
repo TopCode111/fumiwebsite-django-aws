@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block page_title %}ご家庭のお悩み｜千葉県佐倉市で弁護士に相談{% endblock %}
+
+{% block extra_css %}{% endblock %}
+
+
+{% block content %}
+
+{% block lecal_title %}
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <h2>ご家庭のお悩み</h2>
+                <p></p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+<section class="service-single-section section-padding">
+    <div class="container">
+        <div class="row">
+            {% block legal_content %}
+            <div class="col col-md-9 col-md-push-3">
+                <div class="service-single-content">
+                    <h2>ご家庭のお悩み</h2>
+                    <p>離婚、慰謝料、婚姻費用、財産分与、親権、養育費、面会交流など</p>
+                    <div class="service-pic">
+                        <img src="assets/images/service-single/img-5.jpg" alt>
+                    </div>
+
+                    <h3>例</h3>
+                    <p></p>
+                    <div class="service-features">
+                        <ul>
+                            <li><i class="ti-check"></i>パートナーと離婚したいが、相手が応じてくれない。</li>
+                            <li><i class="ti-check"></i>パートナーの不倫が許せないので、慰謝料を請求したい。</li>
+                            <li><i class="ti-check"></i>離婚にあたって、財産分与や、子どもの養育費を請求したい。など</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-single-tab">
+                        <ul class="nav">
+                            <li class="active">
+                                <a href="#precautions" data-toggle="tab">例１</a>
+                            </li>
+                            <li>
+                                <a href="#intelligence" data-toggle="tab">例２</a>
+                            </li>
+                            <li>
+                                <a href="#specializations" data-toggle="tab">例３</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="precautions">
+                                <p>詳しくはお問い合わせください</p>
+                            </div>
+                            <div class="tab-pane fade" id="intelligence">
+                                <p>詳しくはお問い合わせください</p>
+                            </div>
+                            <div class="tab-pane fade" id="specializations">
+                                <p>詳しくはお問い合わせください</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="{% url 'contact_form:contact' %}" class="theme-btn">お問い合わせ</a>
+                </div>
+            </div>
+            {% endblock %}
+            <div class="col col-md-3 col-md-pull-9">
+                <div class="service-sidebar">
+                    <div class="widget service-list-widget">
+                        <ul class="sub-menu">
+                            <li><a href="{% url 'website:legal_topics' %}">一覧表示</a></li>
+                            <li><a href="{% url 'website:domestic_law' %}">ご家庭のお悩み</a></li>
+                            <li><a href="{% url 'website:family_law' %}">ご家族のお悩み</a></li>
+                            <li><a href="{% url 'website:money_law' %}">お金のお悩み</a></li>
+                            <li><a href="{% url 'website:work_law' %}">お仕事のお悩み</a></li>
+                            <li><a href="{% url 'website:dailylife_law' %}">日常生活のお悩み</a></li>
+                        </ul>
+                    </div>
+                    <div class="widget contact-widget">
+                        <div>
+                            <h4>ある悩みがずっと頭の中にあって…</h4>
+                            <p>ちょっとしたお悩みでもかまいません。<br>まずはお気軽にお問い合わせください。</p>
+                            <a href="{% url 'contact_form:contact' %}">お問い合わせ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block extra_js %}{% endblock %}

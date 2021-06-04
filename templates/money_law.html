@@ -1,0 +1,71 @@
+{% extends 'domestic_law.html' %}
+
+{% load static %}
+
+{% block page_title %}お金のお悩み｜千葉県佐倉市で弁護士に相談{% endblock %}
+
+{% block extra_css %}{% endblock %}
+
+
+{% block lecal_title %}
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <h2>お金のお悩み</h2>
+                <p></p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block legal_content %}
+<div class="col col-md-9 col-md-push-3">
+    <div class="service-single-content">
+        <h2>お金のお悩み</h2>
+        <p>金銭の貸し借り、債務整理、交通事故など</p>
+        <div class="service-pic">
+            <img src="assets/images/service-single/img-5.jpg" alt>
+        </div>
+
+        <h3>例</h3>
+        <p></p>
+        <div class="service-features">
+            <ul>
+                <li><i class="ti-check"></i>お金を貸したが、相手が返してくれない。</li>
+                <li><i class="ti-check"></i>借金の返済に困っている。</li>
+                <li><i class="ti-check"></i>交通事故に遭ったが、相手が誠実に対応してくれない。など</li>
+            </ul>
+        </div>
+
+        <div class="service-single-tab">
+            <ul class="nav">
+                <li class="active">
+                    <a href="#precautions" data-toggle="tab">例１</a>
+                </li>
+                <li>
+                    <a href="#intelligence" data-toggle="tab">例２</a>
+                </li>
+                <li>
+                    <a href="#specializations" data-toggle="tab">例３</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="precautions">
+                    <p>詳しくはお問い合わせください</p>
+                </div>
+                <div class="tab-pane fade" id="intelligence">
+                    <p>詳しくはお問い合わせください</p>
+                </div>
+                <div class="tab-pane fade" id="specializations">
+                    <p>詳しくはお問い合わせください</p>
+                </div>
+            </div>
+        </div>
+        <a href="{% url 'contact_form:contact' %}" class="theme-btn">お問い合わせ</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}{% endblock %}
