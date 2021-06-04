@@ -98,7 +98,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # STATIC_ROOT = '/var/www/{}/static'.format(PROJECT_NAME)
-
+'''
 if "AWS_ACCESS_KEY_ID" in os.environ and "AWS_STORAGE_BUCKET_NAME" in os.environ:
     AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY_ID"]
     AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_ACCESS_KEY"]
@@ -119,7 +119,8 @@ if "AWS_ACCESS_KEY_ID" in os.environ and "AWS_STORAGE_BUCKET_NAME" in os.environ
 else:
     MEDIA_URL = "/images/"
     MEDIA_ROOT = os.path.join(BASE_DIR, 'images/')
-
+'''
+MEDIA_URL = '/images/'
 # MEDIAFILES_DIRS = [os.path.join(BASE_DIR, 'fumi_website_django/static')]
 # MEDIA_ROOT = '/var/www/{}/media'.format(PROJECT_NAME)
 
