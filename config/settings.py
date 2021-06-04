@@ -3,8 +3,7 @@ from pathlib import Path
 
 
 # BASE_DIR = Path(__file__).resolve().parent.parent
-BASE_DIR = os.path.dirname(os.path.dirname(
-    os.path.dirname(os.path.abspath(__file__))))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # PROJECT_NAME = os.path.basename(BASE_DIR)
 
@@ -14,7 +13,7 @@ SECRET_KEY = 'django-insecure-hzhog)@rhl&u#5@-&@$@9rj2+11strgt0unxwpwu)bp=h#ubvv
 # turn it off !
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["fumi-env.eba-dpaujqmw.ap-northeast-1.elasticbeanstalk.com","*"]
 
 
 INSTALLED_APPS = [
@@ -26,8 +25,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # my applications
-    'website.apps.WebsiteConfig',
-    'contact_form.apps.ContactFormConfig',
+    'website',
+    'contact_form',
 ]
 
 MIDDLEWARE = [
@@ -45,7 +44,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'fumi_website_django/templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -97,7 +96,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'fumi_website_django/static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # STATIC_ROOT = '/var/www/{}/static'.format(PROJECT_NAME)
 
 if "AWS_ACCESS_KEY_ID" in os.environ and "AWS_STORAGE_BUCKET_NAME" in os.environ:
