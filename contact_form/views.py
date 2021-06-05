@@ -1,7 +1,7 @@
 from django.shortcuts import render
 #from django.shortcuts import render
 from django.core.mail import send_mail
-
+from config.settings import EMAIL_HOST_USER
 
 #from django.http import HttpResponse
 #from django.conf import settings
@@ -54,10 +54,8 @@ def contact(request):
         send_mail(
             'お問い合わせ' + name + '様',
             subject + note + phone,
-            email,
-            # phone,
-            # subject,
-            ['isono@isono-law.com'],
+            email,           
+            [EMAIL_HOST_USER],
             fail_silently=False
         )
 

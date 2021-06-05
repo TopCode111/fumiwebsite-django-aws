@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-hzhog)@rhl&u#5@-&@$@9rj2+11strgt0unxwpwu)bp=h#ubvv
 # turn it off !
 DEBUG = True
 
-ALLOWED_HOSTS = ["fumi-env.eba-dpaujqmw.ap-northeast-1.elasticbeanstalk.com","*"]
+ALLOWED_HOSTS = ["fumi-env.eba-dpaujqmw.ap-northeast-1.elasticbeanstalk.com","isono-law.com","*"]
 
 
 INSTALLED_APPS = [
@@ -96,7 +96,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # STATIC_ROOT = '/var/www/{}/static'.format(PROJECT_NAME)
 
 if "AWS_ACCESS_KEY_ID" in os.environ and "AWS_STORAGE_BUCKET_NAME" in os.environ:
@@ -130,7 +130,7 @@ STRIPE_PUBLISHABLE_KEY = '<stripe-publishable-key>'
 
 
 
-
+'''
 #----EMAIL (FOR エックスサーバーor AWS)
 EMAIL_HOST = 'sv12497.xserver.jp'
 EMAIL_HOST_USER = 'isono@isono-law.com'
@@ -139,17 +139,20 @@ EMAIL_PORT = 465
 EMAIL_USE_TLS = True
 SERVER_EMAIL = 'isono@isono-law.com'
 # EMAIL_FILE_PATH = '/tmp/app-messages' # change this to a proper locationEMAIL_FILE_PATH = '/tmp/app-messages' # change this to a proper location
-
-
 '''
+
+
 #----EMAIL (FOR GMAIL)
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'MY_GMAIL_ADDRESS0221@gmail.com'
-EMAIL_HOST_PASSWORD = 'etefzxwprzblbost'
+EMAIL_HOST_USER = 'isono@isono-law.com'
+EMAIL_HOST_PASSWORD = '25252nico'
+EMAIL_FROM = "hello@hello.io"
+NAME_FROM = "Hello"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-SERVER_EMAIL = 'MY_GMAIL_ADDRESS@gmail.com'
-'''
+SERVER_EMAIL = 'isono@isono-law.com'
+
 
 '''
 #----EMAIL (FOR LOCAL)
@@ -159,7 +162,7 @@ EMAIL_HOST_USER = ''
 EMAIL_USE_TLS = False
 '''
 
-MAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#MAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
