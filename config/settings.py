@@ -128,7 +128,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STRIPE_API_KEY = '<stripe-api-key>'
 STRIPE_PUBLISHABLE_KEY = '<stripe-publishable-key>'
 
-
+# MAILCHIMP CREDENTIALS
+MAILCHIMP_API_KEY = "996304065c9364ac9481fa107fef9b56-us6"
+MAILCHIMP_DATA_CENTER = "us6"
+MAILCHIMP_EMAIL_LIST_ID = "b185dae30a"
 
 '''
 #----EMAIL (FOR エックスサーバーor AWS)
@@ -141,31 +144,34 @@ SERVER_EMAIL = 'isono@isono-law.com'
 # EMAIL_FILE_PATH = '/tmp/app-messages' # change this to a proper locationEMAIL_FILE_PATH = '/tmp/app-messages' # change this to a proper location
 '''
 
-
+'''
 #----EMAIL (FOR GMAIL)
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'isono@isono-law.com'
+EMAIL_HOST_USER = 'fumi.isono222@gmail.com'
 EMAIL_HOST_PASSWORD = '25252nico'
 EMAIL_FROM = "hello@hello.io"
 NAME_FROM = "Hello"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 SERVER_EMAIL = 'isono@isono-law.com'
-
+'''
 
 '''
 #----EMAIL (FOR LOCAL)
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'localhost'
-EMAIL_PORT = '0221'
-EMAIL_HOST_USER = ''
+EMAIL_PORT = '25'
+EMAIL_HOST_USER = 'isono@isono-law.com'
+EMAIL_HOST_PASSWORD = '25252nico'
 EMAIL_USE_TLS = False
+DEFAULT_FROM_EMAIL = 'Server <isono@isono-law.com>'
 '''
-
-#MAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
+SENDGRID_API_KEY="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"
+EMAIL_TEMPLATE_ID = ''
+EMAIL_HOST_USER = 'isono@isono-law.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 # ----------------------------------------------------------------------------------------
 
 #LOGGING = {

@@ -1,11 +1,21 @@
 from django.shortcuts import render
+from django.contrib import messages
 #from django.shortcuts import render
 from django.core.mail import send_mail
-from config.settings import EMAIL_HOST_USER
-
+from django.conf import settings
+#Mailchimp
+import mailchimp_transactional as MailchimpTransactional
+from mailchimp_transactional.api_client import ApiClientError
+#Sendgrid
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
 #from django.http import HttpResponse
 #from django.conf import settings
 
+# Mailchimp Settings
+api_key = settings.MAILCHIMP_API_KEY
+server = settings.MAILCHIMP_DATA_CENTER
+list_id = settings.MAILCHIMP_EMAIL_LIST_ID
 # ----------------------------------------------------------------------------
 '''
 class IndexView(request):
@@ -42,32 +52,76 @@ class ContactView(request):
 def home(request):
     return render(request, 'index.html', {})
 
-
+'''
+# How to send mail via Mailchimp Transactional API
 def contact(request):
     if request.method == 'POST':
         name = request.POST['name']
-        email = request.POST['email']
+        from_email = request.POST['email']
         phone = request.POST['phone']
         subject = request.POST['subject']
         note = request.POST['note']
-
-        send_mail(
-            'お問い合わせ' + name + '様',
-            subject + note + phone,
-            email,           
-            [EMAIL_HOST_USER],
-            fail_silently=False
-        )
+        
+        #send_mail(
+        #    'お問い合わせ' + name + '様',
+        #    subject + note + phone,
+        #    email,           
+        #    [settings.EMAIL_HOST_USER],
+        #    fail_silently=False
+        #)
+        
+        mailchimp = MailchimpTransactional.Client("_3IfzBLBRPaZIuNPOZhTxw")
+        message = {            
+            "text": note,
+            "subject": subject,
+            "from_email": from_email,
+            "from_name": name,
+            "to": [
+                {
+                "email": "rimalisa2019@gmail.com",                
+                "type": "to"
+                }
+            ]
+        }
+        #print(mailchimp)
+        try:            
+            response = mailchimp.messages.send({"message":message})
+            print("API called successfully".format(response))
+        except ApiClientError as error:
+            print("An exception occurred".format(error.text))
 
         return render(request, 'contact.html', {'name': name})
 
     else:
         return render(request, 'contact.html', {})
-    # return render(request, 'contact.html', {'name': name})
+'''
+#How to send mail via Sendgird   
+def contact(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        from_email = request.POST['email']
+        phone = request.POST['phone']
+        subject = request.POST['subject']
+        note = request.POST['note']
 
-    # else:
-    # return render(request, 'contact.html', {})
+        message = Mail(
+            from_email=from_email,
+            to_emails=settings.EMAIL_HOST_USER,
+            subject=subject,
+            html_content=note
+        )
+        try:
+            sg = SendGridAPIClient(settings.SENDGRID_API_KEY)
+            response = sg.send(message)
+            print("success")
+            print(response)
+        except Exception as e:
+            print("error")
+            print(e)
+        return render(request, 'contact.html', {'name': name})
 
+    else:
+        return render(request, 'contact.html', {})
 
 # -------------------------------------------------------------------------------
 
