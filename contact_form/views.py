@@ -36,7 +36,7 @@ class ContactView(request):
             email,
             # phone,
             # subject,
-            ['ayaoshima0221@gmail.com'],
+            [''],
             fail_silently=False
         )
 
@@ -78,7 +78,7 @@ def contact(request):
             "from_name": name,
             "to": [
                 {
-                "email": "rimalisa2019@gmail.com",                
+                "email": "",                
                 "type": "to"
                 }
             ]
