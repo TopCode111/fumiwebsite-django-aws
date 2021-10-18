@@ -133,29 +133,7 @@ MAILCHIMP_API_KEY = ""
 MAILCHIMP_DATA_CENTER = ""
 MAILCHIMP_EMAIL_LIST_ID = ""
 
-'''
-#----EMAIL (FOR エックスサーバーor AWS)
-EMAIL_HOST = 'sv12497.xserver.jp'
-EMAIL_HOST_USER = 'isono@isono-law.com'
-EMAIL_HOST_PASSWORD = ''
-EMAIL_PORT = 465
-EMAIL_USE_TLS = True
-SERVER_EMAIL = ''
-# EMAIL_FILE_PATH = '/tmp/app-messages' # change this to a proper locationEMAIL_FILE_PATH = '/tmp/app-messages' # change this to a proper location
-'''
 
-'''
-#----EMAIL (FOR GMAIL)
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'fumi.isono222@gmail.com'
-EMAIL_HOST_PASSWORD = ''
-EMAIL_FROM = "hello@hello.io"
-NAME_FROM = "Hello"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-SERVER_EMAIL = ''
-'''
 
 SENDGRID_API_KEY=""
 EMAIL_TEMPLATE_ID = ''
@@ -164,32 +142,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 # ----------------------------------------------------------------------------------------
 
-#LOGGING = {
-#    'version': 1,
-#    'disable_existing_loggers': False,
-#    'formatters': {
-#        'django': {
-#            'format': 'django: %(message)s',
-#        },
-#    },
-#    'handlers': {
-#        'logging.handlers.SysLogHandler': {
-#            'level': 'DEBUG',
-#            'class': 'logging.handlers.SysLogHandler',
-#            'facility': 'local7',
-#            'formatter': 'django',
-#            'address': '/dev/log',
-#        },
-#    },
-#    'loggers': {
-#        'loggly_logs': {
-#            'handlers': ['logging.handlers.SysLogHandler'],
-#            'propagate': True,
-#            'format': 'django: %(message)s',
-#            'level': 'DEBUG',
-#        },
-#    }
-#}
+
 
 
 # SERVER_EMAIL = 'ayaoshima0221@gmail.com'
